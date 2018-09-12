@@ -7,8 +7,13 @@
 
 package com.application.clippy;
 
+import com.application.clippy.gui.Tray;
+
 public class Main {
     public static void main(String[] args) {
+        Tray app;
 
+        app = new Tray();
+        app.show();
     }
 }
