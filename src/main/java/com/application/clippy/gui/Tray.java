@@ -17,10 +17,12 @@ public class Tray {
     private SystemTray tray;
 
     public Tray() {
+        ClassLoader classloader;
         Image image;
         URL url;
 
-        url = System.class.getResource("/images/new.png");
+        classloader = Thread.currentThread().getContextClassLoader();
+        url = classloader.getResource("images/attach-2-16.png");
         image = Toolkit.getDefaultToolkit().getImage(url);
 
         this.trayIcon = new TrayIcon(image);
