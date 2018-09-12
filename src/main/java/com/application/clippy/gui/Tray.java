@@ -8,6 +8,8 @@
 package com.application.clippy.gui;
 
 
+import com.application.clippy.gui.actions.ExitAction;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
@@ -41,6 +43,8 @@ public class Tray {
 
         aboutItem = new MenuItem("About");
         exitItem = new MenuItem("Exit");
+
+        exitItem.addActionListener(new ExitAction());
 
         popup.add(aboutItem);
         popup.addSeparator();
