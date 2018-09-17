@@ -8,6 +8,7 @@
 package com.application.clippy.gui;
 
 
+import com.application.clippy.gui.listeners.AboutAction;
 import com.application.clippy.gui.listeners.ExitAction;
 
 import javax.swing.*;
@@ -34,9 +35,7 @@ public class Tray {
     }
 
     private void createMenu() {
-
-        MenuItem aboutItem;
-        MenuItem exitItem;
+        MenuItem aboutItem, exitItem;
         PopupMenu popup;
 
         popup = new PopupMenu();
@@ -44,6 +43,7 @@ public class Tray {
         aboutItem = new MenuItem("About");
         exitItem = new MenuItem("Exit");
 
+        aboutItem.addActionListener(new AboutAction());
         exitItem.addActionListener(new ExitAction());
 
         popup.add(aboutItem);
