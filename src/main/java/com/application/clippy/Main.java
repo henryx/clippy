@@ -10,6 +10,8 @@ package com.application.clippy;
 import com.application.clippy.gui.Tray;
 
 public class Main {
+    public static final String VERSION = "1.0.0";
+
     public static void main(String[] args) {
         Tray app;
 
