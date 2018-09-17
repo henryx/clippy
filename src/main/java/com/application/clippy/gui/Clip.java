@@ -26,6 +26,7 @@ public class Clip implements Runnable {
 
                 this.clipboard.setContents(new StringSelection(""), null);
             } catch (InterruptedException e) {
+                System.exit(1);
             }
         }
     }
