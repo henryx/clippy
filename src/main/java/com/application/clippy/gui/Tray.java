@@ -54,7 +54,14 @@ public class Tray {
     }
 
     public void show() {
+        Thread t;
+
         try {
+
+            t = new Thread(new Clip());
+            t.setName("Clippy");
+            t.start();
+
             this.tray.add(trayIcon);
         } catch (AWTException e) {
             JOptionPane.showMessageDialog(new JFrame(),
