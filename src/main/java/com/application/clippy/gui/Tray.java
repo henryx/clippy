@@ -8,7 +8,7 @@
 package com.application.clippy.gui;
 
 
-import com.application.clippy.gui.actions.ExitAction;
+import com.application.clippy.gui.listeners.ExitAction;
 
 import javax.swing.*;
 import java.awt.*;

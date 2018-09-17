@@ -5,7 +5,7 @@
   License       GPL version 2 (see LICENSE for details)
  */
 
-package com.application.clippy.gui.actions;
+package com.application.clippy.gui.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
