@@ -6,7 +6,7 @@
  */
 package com.application.clippy.gui;
 
-import java.awt.*;
+import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 

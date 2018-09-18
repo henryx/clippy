@@ -4,18 +4,23 @@
   Description   A simple clipboard manager
   License       GPL version 2 (see LICENSE for details)
  */
-
 package com.application.clippy.gui;
-
 
 import com.application.clippy.gui.listeners.AboutAction;
 import com.application.clippy.gui.listeners.ExitAction;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.AWTException;
+import java.awt.Image;
+import java.awt.MenuItem;
+import java.awt.PopupMenu;
+import java.awt.SystemTray;
+import java.awt.Toolkit;
+import java.awt.TrayIcon;
 import java.net.URL;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Tray {
+
     private TrayIcon trayIcon;
     private SystemTray tray;
 
