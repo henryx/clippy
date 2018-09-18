@@ -9,6 +9,7 @@ package com.application.clippy.gui;
 import com.application.clippy.gui.listeners.AboutAction;
 import com.application.clippy.gui.listeners.ExitAction;
 import java.awt.AWTException;
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.awt.MenuItem;
 import java.awt.PopupMenu;
@@ -28,6 +29,18 @@ public class Tray {
         ClassLoader classloader;
         Image image;
         URL url;
+
+        if (!SystemTray.isSupported()) {
+            try {
+                JOptionPane.showMessageDialog(null,
+                        "No system tray support, application exiting.",
+                        "Clippy",
+                        JOptionPane.ERROR_MESSAGE);
+            } catch (HeadlessException ex) {
+                System.out.println("No system tray support, application exiting.");
+            }
+            System.exit(1);
+        }
 
         classloader = Thread.currentThread().getContextClassLoader();
         url = classloader.getResource("images/attach-2-16.png");
